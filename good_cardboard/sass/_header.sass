@@ -1,4 +1,5 @@
 .header
+    padding-top: 15px 0
     &-contacts
         display: flex
         justify-content: end
@@ -6,3 +7,12 @@
         &__phone
             font-size: 22px
             margin-right: 13px
+            &:first-child
+                border-right: solid 1px #cfcfd0
+                padding-right: 13px
+                /*можна делать через псевдоэлементы, но так как флексы то будут танцы с бубном((*/
+                /*&::after
+                    content: ''
+                    width: 1px
+                    height: 32px
+                    opacity: 0,2*/
