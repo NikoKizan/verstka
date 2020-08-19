@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/roboto.css">
     <link rel="stylesheet" href="css/style.css">
    
-    <title>Стартовый шаблон</title>
+    <title>Хороший картон</title>
 </head>
 <body>
     <header class="header">
@@ -76,7 +76,7 @@
                             <form action="#" class="form">
                                 <input type="tel" name="phone" class="form__input" placeholder="Введите номер телефона">
                                 <button class="button button-form">
-                                    <span>Отавить заявку!</span>
+                                    <span>Оставить заявку!</span>
                                 </button> <!-- /.button -->
                                 <small class="form__small">
                                     <p>*Минимальный заказ 500шт</p>
@@ -95,5 +95,48 @@
         <!-- /.container -->
     </section>
     <!-- /.main -->
+    <div class="overlay">
+        <div class="popup">
+            <div class="popup-title">Форма обратной связи</div>
+            <!-- /.popup-title -->
+            <div class="popup-close">&times;</div>
+            <!-- /.popup-close -->
+            <form action="#" class="popup-form">
+                <div class="popup-form__header">
+                    Получите индивидуальное предложение<br>
+                    <span>на производство и поставку изделий</span>
+                </div>
+                <!-- /.popup-form__header -->
+                <label for="phone" class="popup-form__label">Введите Ваш номер телефона:</label>
+                <!-- /.popup-form__label -->
+                <input type="tel" class="popup-form__input" required>
+                <button class="popup-form__btn button">Оставить заявку!</button>
+                <!-- /.popup-form__btn -->
+                <div class="popup-form__note">
+                    *Минимальный заказ 500шт
+                </div>
+                <!-- /.popup-form__note -->
+            </form>
+            <!-- /.popup-form -->
+        </div>
+        <!-- /.popup -->
+    </div>
+    <!-- /.overlay -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-3.2.1.slim.min.js"><\/script>')</script>
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $('.header-contacts__button').on("click", function(){
+                $('.overlay').show()
+            });
+            $('.popup-close').on("click", function(){
+                $('.overlay').hide()
+            });
+        });
+    </script>
+
 </body>
 </html>

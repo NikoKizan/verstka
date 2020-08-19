@@ -1,0 +1,73 @@
+.overlay
+    position: fixed
+    top: 0
+    height: 100%
+    width: 100%
+    display: block
+    background-color: rgba(0, 0, 0, .4)
+    z-index: 3
+    .popup
+        position: fixed
+        top: 100px
+        left: 50%
+        width: 752px
+        transform: translateX(-50%)
+        background-color: #fff
+        &-title
+            background-color: $modal
+            color: #ffffff
+            min-height: 71px
+            line-height: 71px
+            text-align: center
+            text-transform: uppercase
+            font-size: 25px
+            font-weight: 700
+        &-close
+            position: absolute
+            top: -30px
+            right: -20px
+            color: #fff
+            font-size: 35px
+            font-weight: 300
+            cursor: pointer
+        &-form
+            position: relative
+            background: url(../img/main/modal.jpg) center no-repeat
+            background-size: cover
+            padding: 43px 91px 55px 88px
+            color: $text-color-light
+            &__header
+                display: block
+                font-size: 27px
+                font-weight: 400
+                line-height: 27px
+                text-align: center
+            span
+                font-size: 24px
+                font-weight: 400
+                text-align: center
+            &__label
+                display: block
+                margin-top: 23px
+                font-size: 20px
+                font-weight: 300
+                line-height: 30px
+                text-align: center
+            &__input
+                width: 365px
+                height: 56px
+                margin-top: 17px
+            &__btn
+                width: 180px
+                height: 56px
+                margin-left: 16px
+                font-size: 15px
+                font-weight: 500
+                line-height: 22px
+                background-color: $modal
+            &__note
+                margin-top: 9px
+                font-size: 14px
+                font-weight: 300
+                line-height: 30px
+                text-align: center
