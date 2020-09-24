@@ -323,14 +323,26 @@
 
   <section class="calculator" id="calculator">
     <div class="container">
-      <h3 class="calculator-title section-title">
+      <h3 class="calculator-title section-title mobile-element">
         Calculate_ the cost of a future project
       </h3>
-      <p class="calculator-descr">
-        <span>This is an</span>
-        <span class="calculator-descr-accent">approximate</span>
+      <h3 class="calculator-title section-title tablet-element">
+        Calculate_<br> the cost of a<br> future project
+      </h3>
+      <!-- выносим в блок чтобы сработал класс mobile-element -->
+      <div class="mobile-element">
+        <p class="calculator-descr">
+          <span>This is an</span>
+          <span class="calculator-descr-accent">approximate</span>
+          <span>calculation.</span>
+        </p>
+      </div>
+
+      <p class="calculator-descr tablet-element">
+        <span>This is an approximate</span>
         <span>calculation.</span>
       </p>
+      
       <img src="img/calculator.svg" alt="calculator" class="calculator-icon" />
       <p class="calculator-text">
         / The final cost depends on the technical requirements, terms, specifics
@@ -392,14 +404,57 @@
     </div>
   </section>
 
-  <!-- My-CONTACTS (FOOTER) -->
+  <!-- FOOTER -->
 
-  <footer class="my-contacts" id="contacts">
+  <footer class="footer" id="contacts">
+    <div class="container">
+
+      <div class="footer-main-content">
+
+        <div class="footer-my-info">
+          <h3 class="footer-my-name">Mykola Kizan</h3>
+          <p class="footer-my-profession">Frontend Developer</p>
+        </div>
+        
+        <div class="footer-contacts">
+          <a href="tel:+380505050505" class="footer-my-tel">+380 (50) 723 08 17</a>
+          <a href="mailto:alexturdev@gmail.com" class="footer-my-mail">mkizan@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="http://https://github.com/NikoKizan/verstka" target="_blank" class="social-links-item-link">
+          <i class="fab fa-github social-links-item"></i>
+        </a>
+        <a href="" target="_blank" class="social-links-item-link">
+          <i class="fab fa-linkedin social-links-item"></i>
+        </a>
+        <a href="http://https://www.facebook.com/xtralargex/" target="_blank" class="social-links-item-link">
+          <i class="fab fa-facebook-square social-links-item"></i>
+        </a>
+        <a href="http://https://www.instagram.com/_nikolay.k/" target="_blank" class="social-links-item-link">
+          <i class="fab fa-instagram social-links-item"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- <footer class="my-contacts" id="contacts">
     <div class="my-contacts-container">
-      <h3 class="my-contacts-name">Mykola Kizan</h3>
-      <p class="my-contacts-profession">Frontend Developer</p>
-      <a href="tel:+3800507230817" class="my-contacts-phone">+380 (050) 723 08 17</a>
-      <a href="mailto:mkizan@gmail.com" class="my-contacts-email">mkizan@gmail.com</a>
+      
+      <div class="footer-main-content">
+        <div class="footer-my-info">
+          <h3 class="my-contacts-name">Mykola Kizan</h3>
+          <p class="my-contacts-profession">Frontend Developer</p>
+        </div>
+  
+        <div class="footer-contacts">
+          <a href="tel:+3800507230817" class="my-contacts-phone">+380 (050) 723 08 17</a>
+          <a href="mailto:mkizan@gmail.com" class="my-contacts-email">mkizan@gmail.com</a>
+        </div>
+      </div>
+
     </div>
     <div class="my-contacts-social">
       <a href="http://https://github.com/NikoKizan/verstka" target="_blank" class="my-contacts-social-link"><i class="fab fa-github my-contacts-social-item"></i></a>
@@ -407,7 +462,7 @@
       <a href="http://https://www.facebook.com/xtralargex/" target="_blank" class="my-contacts-social-link"><i class="fab fa-facebook-square my-contacts-social-item"></i></a>
       <a href="http://https://www.instagram.com/_nikolay.k/" target="_blank" class="my-contacts-social-link"><i class="fab fa-instagram my-contacts-social-item"></i></a>
     </div>
-  </footer>
+  </footer> -->
 
   <!-- MODALS WRAPPER -->
   <div class="modals-wrapper">
