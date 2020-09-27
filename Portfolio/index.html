@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="css/style-calculator.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style-template.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
 
@@ -28,7 +30,7 @@
             <img src="img/goit-logo.svg" alt="GOIT logo">
           </a>
           <div class="desktop-element">
-            <div class="mobile-menu-items">
+            <div class="mobile-menu-items animate__animated animate__rotateInUpLeft">
               <a href="#about" class="mobile-menu-item">ABOUT</a>
               <a href="#projects" class="mobile-menu-item">PROJECTS</a>
               <a href="#calculator" class="mobile-menu-item">COST CALCULATOR</a>
@@ -67,9 +69,16 @@
         </div>
         <div class="front-page-my-info">
           
-          <img src="img/my-photo.jpg" alt="" class="front-page-my-photo tablet-element">
+          <img 
+            src="img/my-photo.jpg" 
+            alt="my-photo" 
+            data-aos="fade-down" 
+            data-aos-easing="linear" 
+            data-aos-delay="1000" 
+            class="front-page-my-photo tablet-element"
+          />
           
-          <div class="front-page-about-me-container">
+          <div class="front-page-about-me-container" data-aos="fade-left" data-aos-delay="1500">
   
             <p class="front-page-my-descr mobile-element">About me in 2 minutes</p>
   
@@ -83,9 +92,9 @@
   
         </div>
   
-        <img src="img/laptop.svg" alt="" class="front-page-laptop">
+        <img src="img/laptop.svg" alt="" class="front-page-laptop" data-aos="fade-down-right" data-aos-delay="1000">
         
-        <div class="experience-wrapper">
+        <div class="experience-wrapper" data-aos="fade-right" data-aos-delay="500">
           <div class="experience-container">
             <h3 class="experience-title">My Coding Skills & Experience</h3>
             <div class="experience-skill">
@@ -161,13 +170,13 @@
     <div class="container container-left">
 
       <div class="about-content-wrapper">
-        <h3 class="section-title about-title">I code things from scratch_</h3>
+        <h3 class="section-title about-title" data-aos="fade-right" data-aos-delay="500">I code things from scratch_</h3>
         <p class="about-descr mobile-element">
           <span>[and help to</span>
           <span>create great web</span>
           <span>apps]</span>
         </p>
-        <div class="tablet-element desktop-element">
+        <div class="tablet-element desktop-element" data-aos="fade-right" data-aos-delay="1000">
           <p class="about-descr">
             <span>[and help to create</span>
             <span>great web apps]</span>
@@ -183,7 +192,7 @@
             />
           </p>
         </div>
-        <p class="about-text mobile-element desktop-element">
+        <p class="about-text mobile-element desktop-element" data-aos="fade-right" data-aos-delay="1150">
           / I will help you to create a high-performance Landing Page, functional
           corporate website for your business, interactive web app for SaaS,
           startup, or other services.
@@ -195,7 +204,7 @@
           business, interactive web app for<br />
           SaaS, startup, or other services.
         </p>
-        <p class="about-text">
+        <p class="about-text" data-aos="fade-right" data-aos-delay="1300">
           / My specialization is front-end development — client side of the web. But
           I also have full-stack developer experience.
         </p>
@@ -215,7 +224,7 @@
 
   <section class="personal-projects" id="projects">
     <div class="container">
-      <h3 class="section-title personal-projects-title">My personal _projects</h3>
+      <h3 class="section-title personal-projects-title" data-aos="fade-right" data-aos-anchor-placement="top-center">My personal _projects</h3>
 
       <div class="personal-project-item-wrapper">
     
@@ -314,7 +323,7 @@
 
       <div class="team-project-item-wrapper">
 
-        <div class="team-project-item">
+        <div class="team-project-item" data-aos="zoom-in-down" data-aos-delay="500">
           <div class="personal-project-item-container">
             <div class="projet-item-dot-container">
               <div class="projet-item-dot"></div>
@@ -333,7 +342,7 @@
           </p>
           <button class="personal-project-btn accent-btn" id="team-project-questify-btn">More details —</button>
         </div>
-        <div class="team-project-item">
+        <div class="team-project-item" data-aos="zoom-in-down" data-aos-delay="600">
           <div class="personal-project-item-container">
             <div class="projet-item-dot-container">
               <div class="projet-item-dot"></div>
@@ -362,7 +371,7 @@
 
   <section class="callback-form">
     <div class="container">
-      <form action="" class="callback-form-container" id="callback-form">
+      <form action="" class="callback-form-container" id="callback-form" data-aos="flip-up" data-aos-delay="500">
         <h3 class="callback-form-title">/Are you minding [a project?]</h3>
         <p class="callback-form-descr">Leave a request to discuss the task and technical requirements
         </p>
@@ -401,14 +410,14 @@
           <span>calculation.</span>
         </p>
         
-        <img src="img/calculator.svg" alt="calculator" class="calculator-icon" />
+        <img src="img/calculator.svg" alt="calculator" class="calculator-icon" data-aos="fade-left" data-aos-delay="2500"/>
         <p class="calculator-text">
           / The final cost depends on the technical requirements, terms, specifics
           of your project.
         </p>
       </div>
 
-      <form action="" class="calculator-form">
+      <form action="" class="calculator-form" data-aos="fade-up" data-aos-delay="500">
         <div class="calculator-form-input">
           <label for="calculator-form-website-type" class="calculator-form-title">What should be done:</label>
           <select name="website-type" id="calculator-form-website-type" class="calculator-form-select">
@@ -430,7 +439,8 @@
             <option value="react:1000">React</option>
             <option value="angular:1000">Angular</option>
             <option value="vue:1000">Vue</option>
-            <option selected value="php:2000">PHP</option>
+            <option selected value="nodejs:3000">NodeJS</option>
+            <option value="php:2000">PHP</option>
           </select>
         </div>
         <div class="calculator-form-input">
@@ -480,7 +490,7 @@
           <p class="footer-my-profession">Frontend Developer</p>
         </div>
         
-        <div class="footer-contacts">
+        <div class="footer-contacts" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="3000">
           <a href="tel:+380505050505" class="footer-my-tel">+380 (50) 723 08 17</a>
           <a href="mailto:alexturdev@gmail.com" class="footer-my-mail">mkizan@gmail.com</a>
         </div>
@@ -728,12 +738,14 @@
 
   </div>
 
-<!-- Дополнительная библиотека для работы мульти селекта -->
-<script src="js/choices.min.js"></script>
-<!-- Привязка к id -->
-<script src="js/calculator.js"></script>
-<script src="js/project-modals.js"></script>
-<script src="js/modals.js"></script>
-<script src="js/callback-form.js"></script>
+  <!-- Дополнительная библиотека для работы мульти селекта -->
+  <script src="js/choices.min.js"></script>
+  <!-- Привязка к id -->
+  <script src="js/calculator.js"></script>
+  <script src="js/project-modals.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/callback-form.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/animation-on-scroll.js"></script>
 </body>
 </html>
