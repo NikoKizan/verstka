@@ -18,12 +18,13 @@
   <link rel="stylesheet" href="css/style-template.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
 </head>
 <body>
 
   <!-- Front-page -->
 
-  <section class="front-page">
+  <section class="front-page" id="start">
     <div class="container">
       <nav class="navigation">
           <a href="" class="logo-link">
@@ -39,7 +40,7 @@
           </div>
 
           <div class="navigation-part">
-            <a href="#callback-form" class="hire-me-btn">— HIRE ME</a>
+            <a href="#my-callback" class="hire-me-btn">— HIRE ME</a>
             <div class="mobile-element tablet-element">
               <a href="" class="mobile-menu" id="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -65,20 +66,16 @@
           <a href="#projects" class="front-page-galery-btn accent-btn">
             See my recent works  —
           </a>
-  
         </div>
         <div class="front-page-my-info">
           
           <img 
             src="img/my-photo.jpg" 
-            alt="my-photo" 
-            data-aos="fade-down" 
-            data-aos-easing="linear" 
-            data-aos-delay="1000" 
+            alt="my-photo"
             class="front-page-my-photo tablet-element"
           />
           
-          <div class="front-page-about-me-container" data-aos="fade-left" data-aos-delay="1500">
+          <div class="front-page-about-me-container">
   
             <p class="front-page-my-descr mobile-element">About me in 2 minutes</p>
   
@@ -158,6 +155,7 @@
               <p class="experience-text">React Native</p>
             </div>
           </div>
+          <a href="#calculator" class="scroll-down desktop-element">scroll down |</a>
         </div>
       </div>
       
@@ -368,10 +366,10 @@
   </section>
 
   <!-- Callback FORM -->
-
-  <section class="callback-form">
+<!-- data-aos="flip-up" data-aos-delay="500" -->
+  <section class="callback-form" data-aos="zoom-in-up" data-aos-delay="300" id="my-callback">
     <div class="container">
-      <form action="" class="callback-form-container" id="callback-form" data-aos="flip-up" data-aos-delay="500">
+      <form action="" class="callback-form-container" id="callback-form">
         <h3 class="callback-form-title">/Are you minding [a project?]</h3>
         <p class="callback-form-descr">Leave a request to discuss the task and technical requirements
         </p>
@@ -409,15 +407,16 @@
           <span>This is an approximate</span>
           <span>calculation.</span>
         </p>
+        <!--  data-aos="fade-left" data-aos-delay="2500" -->
         
-        <img src="img/calculator.svg" alt="calculator" class="calculator-icon" data-aos="fade-left" data-aos-delay="2500"/>
+        <img src="img/calculator.svg" alt="calculator" class="calculator-icon"/>
         <p class="calculator-text">
           / The final cost depends on the technical requirements, terms, specifics
           of your project.
         </p>
       </div>
 
-      <form action="" class="calculator-form" data-aos="fade-up" data-aos-delay="500">
+      <form action="" class="calculator-form" data-aos="zoom-in-up">
         <div class="calculator-form-input">
           <label for="calculator-form-website-type" class="calculator-form-title">What should be done:</label>
           <select name="website-type" id="calculator-form-website-type" class="calculator-form-select">
@@ -440,7 +439,7 @@
             <option value="angular:1000">Angular</option>
             <option value="vue:1000">Vue</option>
             <option selected value="nodejs:3000">NodeJS</option>
-            <option value="php:2000">PHP</option>
+            <option value="php:1500">PHP</option>
           </select>
         </div>
         <div class="calculator-form-input">
@@ -484,13 +483,13 @@
     <div class="container">
 
       <div class="footer-main-content">
-
+<!--  data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="300" -->
         <div class="footer-my-info">
           <h3 class="footer-my-name">Mykola Kizan</h3>
           <p class="footer-my-profession">Frontend Developer</p>
         </div>
         
-        <div class="footer-contacts" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="3000">
+        <div class="footer-contacts">
           <a href="tel:+380505050505" class="footer-my-tel">+380 (50) 723 08 17</a>
           <a href="mailto:alexturdev@gmail.com" class="footer-my-mail">mkizan@gmail.com</a>
         </div>
@@ -513,6 +512,10 @@
 
     </div>
   </footer>
+
+  <a href="#start" class="scroll-to-top">
+    <i class="fas fa-level-up-alt"></i>
+  </a>
 
   <!-- MODALS WRAPPER -->
   <div class="modals-wrapper">
@@ -559,11 +562,27 @@
         <i class="fas fa-times modal-close-btn"></i>
 
         <div class="project-modal-scrollable">
-          <img
-            class="project-modal-img"
-            src="img/projects/personal/full-stack.jpg"
-            alt="full stack project image 1"
-          />
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <img src="img/projects/personal/full-stack/full-stack-1.png" class="swiper-slide" alt="full stack 1">
+                <img src="img/projects/personal/full-stack/full-stack-2.png" class="swiper-slide" alt="full stack 2">
+                <img src="img/projects/personal/full-stack/full-stack-3.png" class="swiper-slide" alt="full stack 3">
+                <img src="img/projects/personal/full-stack/full-stack-4.png" class="swiper-slide" alt="full stack 4">
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev tablet-element desktop-element"></div>
+            <div class="swiper-button-next tablet-element desktop-element"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
 
           <a href="https://fullstackonline.goit.ua/" class="project-modal-title"
             >Goit Full Stack разработчик</a
@@ -593,11 +612,26 @@
         <i class="fas fa-times modal-close-btn"></i>
 
         <div class="project-modal-scrollable">
-          <img
-            class="project-modal-img"
-            src="img/projects/personal/wedding.jpg"
-            alt="wedding project image 1"
-          />
+        
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <img src="img/projects/personal/wedding/wedding-1.jpg" class="swiper-slide" alt="wedding-1">
+                <img src="img/projects/personal/wedding/wedding-2.jpg" class="swiper-slide" alt="wedding-2">
+                <img src="img/projects/personal/wedding/wedding-3.jpg" class="swiper-slide" alt="wedding-3">
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev tablet-element desktop-element"></div>
+            <div class="swiper-button-next tablet-element desktop-element"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
 
           <a href="https://www.beeruza.com.ua/" class="project-modal-title"
             >Beeruza - свадебные пригласительные и аксессуары</a
@@ -625,11 +659,26 @@
         <i class="fas fa-times modal-close-btn"></i>
 
         <div class="project-modal-scrollable">
-          <img
-            class="project-modal-img"
-            src="img/projects/personal/pro-test.jpg"
-            alt="pro-test project image 1"
-          />
+
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <img src="img/projects/personal/pro-test/pro-test-1.jpg" class="swiper-slide" alt="pro-test-1">
+              <img src="img/projects/personal/pro-test/pro-test-2.jpg" class="swiper-slide" alt="pro-test-2">
+              <img src="img/projects/personal/pro-test/pro-test-3.jpg" class="swiper-slide" alt="pro-test-3">
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev tablet-element desktop-element"></div>
+            <div class="swiper-button-next tablet-element desktop-element"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
 
           <a href="https://pro-test.goit.co.ua/" class="project-modal-title"
             >Pro test - техническая подготовка QA</a
@@ -653,11 +702,25 @@
         <i class="fas fa-times modal-close-btn"></i>
 
         <div class="project-modal-scrollable">
-          <img
-            class="project-modal-img"
-            src="img/projects/personal/goit.jpg"
-            alt="goit project image 1"
-          />
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <img src="img/projects/personal/goit/goit-1.jpg" class="swiper-slide" alt="goit-1">
+              <img src="img/projects/personal/goit/goit-2.jpg" class="swiper-slide" alt="goit-2">
+              <img src="img/projects/personal/goit/goit-3.jpg" class="swiper-slide" alt="goit-3">
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev tablet-element desktop-element"></div>
+            <div class="swiper-button-next tablet-element desktop-element"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
 
           <a href="https://goit.ua/" class="project-modal-title"
             >GoIT - курсы программирования</a
@@ -747,5 +810,7 @@
   <script src="js/callback-form.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/animation-on-scroll.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/sliders.js"></script>
 </body>
 </html>
