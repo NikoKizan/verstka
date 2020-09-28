@@ -12,11 +12,11 @@ body {
 /* COMMON SECTION */
 
 .tablet-element {
-  display: none !important;
+  display: none;
 }
 
 .desktop-element {
-  display: none !important;
+  display: none;
 }
 
 .mobile-element {
@@ -958,7 +958,7 @@ hire-me-btn:hover {
   }
   
   .tablet-element {
-    display: block !important;
+    display: block;
   }
 
   .front-page-my-name {
@@ -1182,11 +1182,11 @@ hire-me-btn:hover {
   }
 
   .tablet-element {
-    display: none !important;
+    display: none;
   }
 
   .desktop-element {
-    display: block !important;
+    display: block;
   }
 
   .hire-me-btn {
